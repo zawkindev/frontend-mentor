@@ -1,0 +1,111 @@
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+img{
+  all: unset;
+  overflow: clip;
+  overflow-clip-margin: content-box;
+}
+
+*{
+  padding: unset;
+  margin: unset;
+}
+
+body{
+  font-size: 14px;
+  background-color: var(--primary-cream);
+  font-family: var(--font-montserrat);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vmax;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  max-height: 500px;
+  max-width: 600px;
+}
+
+.card__description{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 35px;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card__description h3{
+  font-weight: 100;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--neutral-dark-grayish-blue);
+  font-family: var(--font-montserrat);
+}
+
+.card__description h1{
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 35px;
+  font-family: var(--font-fraunces);
+}
+
+.card__description p{
+  line-height: 25px;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.card__img{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+  width: 50%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card__cost{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-dark-cyan);
+}
+
+.card__cost span{
+  color: var(--neutral-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.card__button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 0px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: var(--primary-dark-cyan);
+  color: #fff;
+  border: unset;
+}
