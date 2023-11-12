@@ -9,31 +9,28 @@
   --desktop: 1440px;
 }
 
-img{
-  all: unset;
-  overflow: clip;
-  overflow-clip-margin: content-box;
-}
 
-*{
+* {
   padding: unset;
   margin: unset;
 }
 
-body{
+body {
+  box-sizing: border-box;
   font-size: 14px;
   background-color: var(--primary-cream);
   font-family: var(--font-montserrat);
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   height: 50vmax;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
@@ -41,7 +38,7 @@ body{
   max-width: 600px;
 }
 
-.card__description{
+.card__description {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -52,7 +49,7 @@ body{
   border-bottom-right-radius: 10px;
 }
 
-.card__description h3{
+.card__description h3 {
   font-weight: 100;
   font-size: 13px;
   letter-spacing: 5px;
@@ -61,19 +58,19 @@ body{
   font-family: var(--font-montserrat);
 }
 
-.card__description h1{
+.card__description h1 {
   font-weight: 700;
   font-size: 34px;
   line-height: 35px;
   font-family: var(--font-fraunces);
 }
 
-.card__description p{
+.card__description p {
   line-height: 25px;
   color: var(--neutral-dark-grayish-blue);
 }
 
-.card__img{
+.card__img {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -83,7 +80,7 @@ body{
   border-bottom-left-radius: 10px;
 }
 
-.card__cost{
+.card__cost {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -91,12 +88,12 @@ body{
   color: var(--primary-dark-cyan);
 }
 
-.card__cost span{
+.card__cost span {
   color: var(--neutral-dark-grayish-blue);
   text-decoration: line-through;
 }
 
-.card__button{
+.card__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,4 +105,30 @@ body{
   background-color: var(--primary-dark-cyan);
   color: #fff;
   border: unset;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1440px) {
+  .container {
+    padding: 0 20px;
+    height: 77vh;
+    align-items: center;
+  }
+  .card {
+    flex-direction: column;
+    height: unset;
+    width: unset;
+  }
+
+  .card__img {
+    width: unset;
+    max-height: 30vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: unset;
+  }
+  .card__description {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: unset;
+  }
 }
