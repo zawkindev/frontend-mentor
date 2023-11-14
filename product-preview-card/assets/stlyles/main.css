@@ -121,7 +121,8 @@ body {
 
   .card__img {
     width: unset;
-    max-height: 30vh;
+    max-height: 40vh;
+    src: url(../images/image-product-mobile.jpg); 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: unset;
