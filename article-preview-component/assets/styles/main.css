@@ -1,0 +1,152 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: unset;
+  margin: unset;
+}
+
+body {
+  background-color: var(--light-grayish-blue);
+  font-family: "Manrope", sans-serif;
+}
+
+button {
+  height: 30px;
+  width: 30px;
+  border: unset;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.share-icon {
+  height: 100%;
+  width: 100%;
+}
+
+button:hover,
+button:hover .share-icon {
+  fill: #fff;
+  background-color: var(--desaturated-dark-blue);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+h3,
+h4 {
+  color: var(--very-dark-grayish-blue);
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--desaturated-dark-blue);
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+}
+
+.card {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1.2fr 2fr;
+  margin: auto;
+  align-self: center;
+  border-radius: 10px;
+  width: 900px;
+  background-color: #fff;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card__description {
+  display: grid;
+  padding: 30px;
+  row-gap: 30px;
+}
+
+.card__profile {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
+}
+
+.card__profile-photo {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  align-items: center;
+}
+
+.share-float {
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 10px;
+  padding: 15px 30px;
+  right: -70px;
+  bottom: 90px;
+}
+
+.share-float p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.relative {
+  position: relative;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: -40px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--very-dark-grayish-blue);
+}
+
+button:active ~ .share-float {
+  display: flex;
+}
+
+.share-float img {
+  height: 1.3rem;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1440px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .card__image {
+    height: 200px;
+    border-bottom-left-radius: unset;
+    border-top-right-radius: 10px;
+  }
+
+
+}
