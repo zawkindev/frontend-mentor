@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  position: relative;
   max-height: 500px;
   max-width: 600px;
 }
@@ -121,8 +122,9 @@ body {
 
   .card__img {
     width: unset;
-    max-height: 40vh;
+    height: 30vh;
     src: url(../images/image-product-mobile.jpg); 
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: unset;
