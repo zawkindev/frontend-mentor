@@ -1,0 +1,133 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  margin: auto;
+  text-align: center;
+  display: grid;
+}
+
+.heading * {
+  margin: unset;
+  font-size: 2rem;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: unset;
+  padding: unset;
+}
+
+.heading h2 {
+  font-weight: 200;
+  margin-bottom: unset;
+  padding-bottom: unset;
+}
+
+.heading p {
+  font-size: 1rem;
+  width: 30%;
+  margin: auto;
+}
+
+h1,
+h2 {
+  color: var(--very-dark-blue);
+}
+
+.cards {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 70%;
+  gap: 10px;
+}
+
+.card {
+  display: grid;
+  width: 80%;
+  text-align: left;
+  justify-self: center;
+  grid-template-rows: 2fr 1fr;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 15px;
+
+  padding: 30px;
+  padding-top: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper {
+  display: grid;
+  gap: 40px;
+  justify-self: center;
+}
+
+.card p {
+  max-width: 90%;
+}
+
+.card img {
+  display: grid;
+  justify-self: right;
+  margin-top: 10px;
+}
+
+.border-red {
+  border-top: 5px solid var(--red);
+}
+
+.border-cyan {
+  border-top: 5px solid var(--cyan);
+}
+
+.border-blue {
+  border-top: 5px solid var(--blue);
+}
+.border-orange {
+  border-top: 5px solid var(--orange);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1440px) {
+  .container{
+    margin: 70px 0;
+  }
+  .heading {
+    width: 90%;
+    margin: auto;
+  }
+  .heading * {
+    font-size: 1.5rem;
+  }
+  .heading p {
+    width: 90%;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
